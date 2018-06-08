@@ -66,9 +66,15 @@ const InitialState = {
             'investigate types of numbers that appear in government‟s budgets, elections results, census reports, etc.',
             'Other'
         ],
-        '1.1.2 identify and explain the place values of  digits in a numeral up to 100,000,000': [],
-        '1.2.1 identify sets of objects and numbers': [],
-        '1.2.2 describe and write sets of objects and numbers': []
+        '1.1.2 identify and explain the place values of  digits in a numeral up to 100,000,000': [
+            'write the value of digits in given numerals'
+        ],
+        '1.2.1 identify sets of objects and numbers': [
+            'form sets using real life situations'
+        ],
+        '1.2.2 describe and write sets of objects and numbers': [
+            'describe and write sets using words as well as the curly brackets'
+        ]
     },
     selectedObjectives: [],
     selectedActivities: [],
@@ -209,6 +215,21 @@ class GhanaMathJHS1 extends HTMLElement {
                         return html`
                             <div>
                                 <input type="checkbox"> ${material} ${material === 'Other' ? html`<input type="text">` : ''}
+                            </div>
+                        `;
+                    })}
+                </div>
+            </div>
+
+            <div hidden="${state.selectedEvaluations.length === 0}">
+                <div>
+                    Evaluations
+                </div>
+                <div>
+                    ${state.selectedEvaluations.map((evaluation) => {
+                        return html`
+                            <div>
+                                <input type="checkbox"> ${evaluation} ${evaluation === 'Other' ? html`<input type="text">` : ''}
                             </div>
                         `;
                     })}
