@@ -50,7 +50,11 @@ const InitialState = {
             'Place value chart',
             'Other'
         ],
-        '1.1.2 identify and explain the place values of  digits in a numeral up to 100,000,000': [],
+        '1.1.2 identify and explain the place values of  digits in a numeral up to 100,000,000': [
+            'Abacus',
+            'Colour-coded materials',
+            'Place value chart'
+        ],
         '1.2.1 identify sets of objects and numbers': [],
         '1.2.2 describe and write sets of objects and numbers': []
     },
