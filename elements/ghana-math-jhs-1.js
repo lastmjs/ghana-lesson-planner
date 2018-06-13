@@ -116,6 +116,24 @@ class GhanaMathJHS1 extends HTMLElement {
             key: 'selectedObjectives',
             value: Store.getState().objectives[e.target.value]
         });
+
+        Store.dispatch({
+            type: 'SET_LOCAL_STATE',
+            key: 'selectedActivities',
+            value: []
+        });
+
+        Store.dispatch({
+            type: 'SET_LOCAL_STATE',
+            key: 'selectedMaterials',
+            value: []
+        });
+
+        Store.dispatch({
+            type: 'SET_LOCAL_STATE',
+            key: 'selectedEvaluations',
+            value: []
+        });
     }
 
     objectivesSelectChange(e) {
@@ -175,7 +193,7 @@ class GhanaMathJHS1 extends HTMLElement {
                     Objectives
                 </div>
                 <select onchange="${(e) => this.objectivesSelectChange(e)}">
-                    <option selected disabled hidden>Choose</option>
+                    <option selected="${state.selectedActivities.length === 0}" disabled hidden>Choose</option>
                     ${state.selectedObjectives.map((objective) => {
                         return html`
                             <option value="${objective}">${objective}</option>
