@@ -3,7 +3,7 @@ import {createStore} from 'redux';
 
 const InitialState = {
     mathTopics: [
-        '1.1 Numbers and Numerals',
+        '1.1 Numbers and Numerals and Puppies',
         '1.2 Sets'
     ],
     objectives: {
